@@ -30,7 +30,7 @@
     />
     <menuitem
         id="menu_xml_tester_wizard"
-        name="XML SALE ORDER"
+        name="Lisec Integration"
         action="action_xml_tester_wizard"
         parent="sale.sale_menu_root"
         sequence="21"
