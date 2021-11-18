@@ -148,11 +148,7 @@ class TESTXML(models.TransientModel):
             'team_id': team_id.id,
             'user_id': user_id.id,
             'order_create_user': user_id2.id,
-            }
-				
-
-	
-	)
+            })
 
 
 
