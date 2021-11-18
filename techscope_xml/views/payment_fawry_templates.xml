@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <template id="assets_frontend" name="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src='/techscope_fawry/static/js/fawry_form.js'/>
+        </xpath>
+    </template>
+        <template id="fawry_template_modal" name="fawry">  
+            <div id="fawrymodal" class="modal fade" role="dialog"> 
+                <script type="text/javascript" t-att-src='flink'/>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Payment Details</h4>
+                            <button type="button" class="close" data-dismiss="modal">&amp;times;</button>
+                        </div>
+
+                        <div class="modal-body cardconnect-checkout-div">
+                                    <input type='hidden' name='chargeRequest' t-att-value='chargeRequest'/>
+                                    
+                                    <div class="col-sm-12">
+                                        <div>
+                                            <button class="btn btn-success btn-lg btn-block" type="button"  id="fawry-payment-btn" onclick="checkout_fawry()" >Pay
+                                                <t t-esc='amount or "0.0"'/>
+                                            </button>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <script type="text/javascript" src='/techscope_fawry/static/js/fawry_session.js'/>
+
+        </template>
+
+
+    </data>
+</odoo>
