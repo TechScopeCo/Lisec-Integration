@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="XML_wizard_form_view" model="ir.ui.view">
+        <field name="name">xml.tester.wizard.form</field>
+        <field name="model">xml.tester</field>
+        <field name="arch" type="xml">
+            <form string="Payment Sheet">
+              <sheet>
+                <div>
+                    This Wizard will only process records in Ready To Process state only.
+                </div>
+                <field name="xml_file" />
+                <footer>
+                    <button name="validate" string="Validate" type="object" class="oe_highlight"/>
+                     
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+              </sheet>
+            </form>
+        </field>
+    </record>
+
+
+        <act_window
+        id="action_xml_tester_wizard"
+        name="Lisec Integration"
+        res_model='xml.tester'
+        view_mode="form"
+        target="new"
+    />
+    <menuitem
+        id="menu_xml_tester_wizard"
+        name="XML SALE ORDER"
+        action="action_xml_tester_wizard"
+        parent="sale.sale_menu_root"
+        sequence="21"
+    />
+</odoo>
