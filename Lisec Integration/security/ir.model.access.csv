@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_xml_tester_user,techscope_xml.xml.tester,model_xml_tester,base.group_user,1,1,1,1
