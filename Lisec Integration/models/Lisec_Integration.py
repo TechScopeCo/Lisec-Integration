@@ -150,3 +150,8 @@ class TESTXML(models.TransientModel):
             'order_create_user': user_id2.id,
             })
 
+
+
+			for order in sale_orders:
+    order.action_confirm()
+
